@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ukázková stránka s tlačítkem na spuštění skriptu</title>
+	<script src="a.js"></script> <!-- Odkaz na skript a.js -->
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		button {
+			width: 100%;
+			height: 100%;
+			font-size: 24px;
+			background-color: #007bff;
+			color: white;
+			border: none;
+			cursor: pointer;
+			outline: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
+	<script>
+		function spustitSkript() {
+			var script = document.createElement('script'); // Vytvoření elementu skriptu
+			script.src = 'a.js'; // Nastavení atributu src na název souboru skriptu
+			document.head.appendChild(script); // Přidání elementu skriptu do hlavičky dokumentu
+		}
+	</script>
+</head>
+<body>
+	<button onclick="spustitSkript()">Spustit skript</button> <!-- Tlačítko s funkcí onclick pro spuštění skriptu a.js -->
+</body>
+</html>
